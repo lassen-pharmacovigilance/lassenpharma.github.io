@@ -3,10 +3,30 @@
 --------------------------------------------------------------*/
 :root {
   scroll-behavior: smooth;
+  
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10,10,15,0.8) 0%, rgba(10,10,15,0.4) 100%);
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(8px);
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #444444;
 }
 canvas {
@@ -33,7 +53,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -66,10 +86,6 @@ section {
   font-weight: 700;
   color: #012970;
 }
-#hero {
-  margin-top: 300px;
-}
-
 
 @media (max-width: 768px) {
   .section-header p {
