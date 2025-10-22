@@ -3,17 +3,17 @@
 --------------------------------------------------------------*/
 :root {
   scroll-behavior: smooth;
-  --lassen-primary: #6f2ead;         /* violeta principal */
-  --lassen-primary-600:#5f2896;      /* hover/focus */
-  --lassen-primary-700:#4f2280;      /* active */
-  --lassen-secondary:#ae7edc;        /* acento */
-  --lassen-ink:#3f205b;              /* texto fuerte / headings */
-  --lassen-text:#4b4656;             /* párrafos */
-  --lassen-muted:#7a6b8e;            /* secundarios */
-  --lassen-bg-soft:#f7f2fb;          /* fondos suaves */
-  --lassen-chip:#f2e8fa;             /* pills/chips */
-  --lassen-border:#eadcf5;           /* bordes claros */
-  --lassen-focus: #caa8ef;           /* outline accesible */
+  --lassen-primary: #6f2ead; /* violeta principal */
+  --lassen-primary-600: #5f2896; /* hover/focus */
+  --lassen-primary-700: #4f2280; /* active */
+  --lassen-secondary: #ae7edc; /* acento */
+  --lassen-ink: #3f205b; /* texto fuerte / headings */
+  --lassen-text: #4b4656; /* párrafos */
+  --lassen-muted: #7a6b8e; /* secundarios */
+  --lassen-bg-soft: #f7f2fb; /* fondos suaves */
+  --lassen-chip: #f2e8fa; /* pills/chips */
+  --lassen-border: #eadcf5; /* bordes claros */
+  --lassen-focus: #caa8ef; /* outline accesible */
 
   /* alias para reemplazar “azules” heredados */
   --primary: var(--lassen-primary);
@@ -37,7 +37,7 @@
 
 body {
   font-family: "Inter", sans-serif;
-  color:var(--lassen-text);
+  color: var(--lassen-text);
 }
 #background {
   position: fixed;
@@ -216,7 +216,7 @@ section {
 }
 
 .back-to-top:hover {
- background: var(--primary-600);
+  background: var(--primary-600);
   color: #fff;
 }
 
@@ -298,7 +298,7 @@ section {
   font-family: "Nunito", sans-serif;
   font-size: 16px;
   font-weight: 700;
- color: var(--lassen-ink);
+  color: var(--lassen-ink);
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -314,7 +314,7 @@ section {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover > a {
- color: var(--primary);
+  color: var(--primary);
 }
 
 .navbar .getstarted,
@@ -428,7 +428,7 @@ section {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #012970;
+  color: var(--lassen-primary);
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -547,7 +547,7 @@ section {
   margin: 0;
   font-size: 48px;
   font-weight: 700;
- color: var(--lassen-ink);
+  color: var(--lassen-ink);
 }
 
 .hero h2 {
@@ -579,7 +579,7 @@ section {
   font-size: 18px;
   transition: 0.3s;
 }
-.hero .btn-get-started:hover{
+.hero .btn-get-started:hover {
   background: var(--primary-600);
 }
 
@@ -645,14 +645,14 @@ section {
 .about h3 {
   font-size: 14px;
   font-weight: 700;
- color: var(--lassen-secondary);
+  color: var(--lassen-secondary);
   text-transform: uppercase;
 }
 
 .about h2 {
   font-size: 24px;
   font-weight: 700;
-   color: var(--lassen-primary);
+  color: var(--lassen-primary);
 }
 
 .about p {
@@ -667,7 +667,7 @@ section {
   transition: 0.5s;
   color: #fff;
   background: var(--lassen-primary);
-  box-shadow: 0px 5px 25px rgba(111, 46, 173, 0.30);
+  box-shadow: 0px 5px 25px rgba(111, 46, 173, 0.3);
 }
 
 .about .btn-read-more span {
@@ -706,7 +706,7 @@ section {
 
 .values .box h3 {
   font-size: 24px;
-  color: #012970;
+  color: var(--lassen-primary);
   font-weight: 700;
   margin-bottom: 18px;
 }
@@ -746,7 +746,7 @@ section {
   font-size: 36px;
   display: block;
   font-weight: 600;
-  color: #0b198f;
+  color: var(--lassen-primary);
 }
 
 .counts .count-box p {
@@ -761,30 +761,31 @@ section {
 --------------------------------------------------------------*/
 .features .feature-box {
   padding: 24px 20px;
-  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+  box-shadow: 0px 0 30px rgba(63, 32, 91, 0.08);
   transition: 0.3s;
   height: 100%;
 }
 
 .features .feature-box h3 {
   font-size: 18px;
-  color: #012970;
+  color: var(--lassen-ink);
   font-weight: 700;
   margin: 0;
 }
 
 .features .feature-box i {
   line-height: 0;
-  background: #ecf3ff;
+  background: var(--lassen-chip);
   padding: 4px;
   margin-right: 10px;
   font-size: 24px;
   border-radius: 3px;
   transition: 0.3s;
+  color: var(--lassen-primary);
 }
 
 .features .feature-box:hover i {
-  background: #4154f1;
+  background: var(--lassen-primary);
   color: #fff;
 }
 
@@ -793,7 +794,7 @@ section {
 }
 
 .features .feture-tabs h3 {
-  color: #012970;
+  color: var(--lassen-ink);
   font-weight: 700;
   font-size: 32px;
   margin-bottom: 10px;
@@ -806,7 +807,7 @@ section {
 }
 
 .features .feture-tabs .nav-pills {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--lassen-border);
 }
 
 .features .feture-tabs .nav-link {
@@ -814,7 +815,7 @@ section {
   text-transform: uppercase;
   font-size: 15px;
   font-weight: 600;
-  color: #012970;
+  color: var(--lassen-ink);
   padding: 12px 0;
   margin-right: 25px;
   margin-bottom: -2px;
@@ -822,22 +823,22 @@ section {
 }
 
 .features .feture-tabs .nav-link.active {
-  color: #4154f1;
-  border-bottom: 3px solid #4154f1;
+  color: var(--lassen-primary);
+  border-bottom: 3px solid var(--lassen-primary);
 }
 
 .features .feture-tabs .tab-content h4 {
   font-size: 18px;
   margin: 0;
   font-weight: 700;
-  color: #012970;
+  color: var(--lassen-ink);
 }
 
 .features .feture-tabs .tab-content i {
   font-size: 24px;
   line-height: 0;
   margin-right: 8px;
-  color: #4154f1;
+  color: var(--lassen-primary);
 }
 
 .features .feature-icons {
@@ -845,7 +846,7 @@ section {
 }
 
 .features .feature-icons h3 {
-  color: #012970;
+  color: var(--lassen-ink);
   font-weight: 700;
   font-size: 32px;
   margin-bottom: 20px;
@@ -866,26 +867,34 @@ section {
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 10px 0;
-  color: #012970;
+  color: var(--lassen-ink);
 }
 
 .features .feature-icons .content .icon-box i {
   font-size: 44px;
   line-height: 44px;
-  color: #0245bc;
+  color: var(--lassen-primary);
   margin-right: 15px;
+  background: var(--lassen-chip);
+  border-radius: 8px;
+  padding: 6px;
+  transition: 0.3s;
 }
 
 .features .feature-icons .content .icon-box p {
   font-size: 15px;
-  color: #848484;
+  color: var(--lassen-text);
 }
 
+.features .feature-icons .content .icon-box:hover i {
+  background: var(--lassen-primary);
+  color: #fff;
+}
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
 .services .service-box {
-  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+  box-shadow: 0px 0 30px rgba(63, 32, 91, 0.08);
   height: 100%;
   padding: 60px 30px;
   text-align: center;
@@ -905,7 +914,7 @@ section {
 }
 
 .services .service-box h3 {
-  color: #444444;
+  color: var(--lassen-text);
   font-weight: 700;
 }
 
@@ -925,105 +934,105 @@ section {
 }
 
 .services .service-box.blue {
-  border-bottom: 3px solid #2db6fa;
+  border-bottom: 3px solid var(--lassen-primary);
 }
 
 .services .service-box.blue .icon {
-  color: #2db6fa;
-  background: #dbf3fe;
+  color: var(--lassen-primary);
+  background: var(--lassen-chip);
 }
 
 .services .service-box.blue .read-more {
-  color: #2db6fa;
+   color: var(--lassen-primary);
 }
 
 .services .service-box.blue:hover {
-  background: #2db6fa;
+   background: var(--lassen-primary);
 }
 
 .services .service-box.orange {
-  border-bottom: 3px solid #f68c09;
+  border-bottom: 3px solid var(--lassen-secondary);
 }
 
 .services .service-box.orange .icon {
-  color: #f68c09;
-  background: #fde3c4;
+   color: var(--lassen-secondary);
+  background: var(--lassen-bg-soft);
 }
 
 .services .service-box.orange .read-more {
-  color: #f68c09;
+   color: var(--lassen-secondary);
 }
 
 .services .service-box.orange:hover {
-  background: #f68c09;
+  background: var(--lassen-secondary);
 }
 
 .services .service-box.green {
-  border-bottom: 3px solid #08da4e;
+  border-bottom: 3px solid var(--lassen-primary-600);
 }
 
 .services .service-box.green .icon {
-  color: #08da4e;
-  background: #cffddf;
+  color: var(--lassen-primary-600);
+  background: var(--lassen-chip);
 }
 
 .services .service-box.green .read-more {
-  color: #08da4e;
+  color: var(--lassen-primary-600);
 }
 
 .services .service-box.green:hover {
-  background: #08da4e;
+ background: var(--lassen-primary-600);
 }
 
 .services .service-box.red {
-  border-bottom: 3px solid #e9222c;
+  border-bottom: 3px solid var(--lassen-primary-700);
 }
 
 .services .service-box.red .icon {
-  color: #e9222c;
-  background: #fef7f8;
+  color: var(--lassen-primary-700);
+  background: var(--lassen-bg-soft);
 }
 
 .services .service-box.red .read-more {
-  color: #e9222c;
+   color: var(--lassen-primary-700);
 }
 
 .services .service-box.red:hover {
-  background: #e9222c;
+  background: var(--lassen-primary-700);
 }
 
 .services .service-box.purple {
-  border-bottom: 3px solid #b50edf;
+ border-bottom: 3px solid var(--lassen-primary);
 }
 
 .services .service-box.purple .icon {
-  color: #b50edf;
-  background: #f8e4fd;
+color: var(--lassen-primary);
+  background: var(--lassen-chip);
 }
 
 .services .service-box.purple .read-more {
-  color: #b50edf;
+   color: var(--lassen-primary);
 }
 
 .services .service-box.purple:hover {
-  background: #b50edf;
+  background: var(--lassen-primary);
 }
 
 .services .service-box.pink {
-  border-bottom: 3px solid #f51f9c;
+ border-bottom: 3px solid var(--lassen-secondary);
 }
 
 .services .service-box.pink .icon {
-  color: #f51f9c;
-  background: #feecf7;
+ color: var(--lassen-secondary);
+  background: var(--lassen-bg-soft);
 }
 
 .services .service-box.pink .read-more {
-  color: #f51f9c;
+  color: var(--lassen-secondary);
 }
 
 .services .service-box.pink:hover {
-  background: #f51f9c;
+ background: var(--lassen-secondary);
 }
 
 .services .service-box:hover h3,
@@ -1138,32 +1147,108 @@ section {
 /*--------------------------------------------------------------
 # F.A.Q
 --------------------------------------------------------------*/
-.faq .accordion-collapse {
-  border: 0;
+.faq {
+ 
+  --faq-card-bg: rgba(255, 255, 255, 0.85);
+  --faq-shadow: 0 8px 28px rgba(63, 32, 91, 0.12);
 }
 
+.faq .accordion {
+  gap: 16px;                 /
+}
+
+.faq .accordion-item {
+  background: var(--faq-card-bg);
+  border: 1px solid var(--lassen-border);
+  border-radius: 14px;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  box-shadow: var(--faq-shadow);
+  margin-bottom: 16px;       
+}
+
+/* Botón del acordeón */
 .faq .accordion-button {
-  padding: 15px 15px 20px 0;
-  font-weight: 600;
-  border: 0;
+  padding: 18px 22px;
+  font-weight: 700;
   font-size: 18px;
-  color: #444444;
+  color: var(--lassen-ink);
+  background: transparent;
+  border: 0;
   text-align: left;
+  box-shadow: none !important;     
+  transition: background .25s ease, color .25s ease, padding .2s ease;
 }
 
+/* Hover: leve tint violeta */
+.faq .accordion-button:hover {
+  background: var(--lassen-bg-soft);
+}
+
+/* Estado abierto */
+.faq .accordion-button:not(.collapsed) {
+  color: var(--lassen-primary);
+  background: linear-gradient(0deg, rgba(111,46,173,0.06), rgba(111,46,173,0.06));
+  border-bottom: 1px solid var(--lassen-border);
+  padding-bottom: 16px;
+}
+
+/* Foco accesible */
 .faq .accordion-button:focus {
+  outline: 3px solid var(--lassen-focus);
+  outline-offset: 2px;
   box-shadow: none;
 }
 
-.faq .accordion-button:not(.collapsed) {
-  background: none;
-  color: #4154f1;
-  border-bottom: 0;
+/* Chevron más grande + animado (aprovecha el de Bootstrap) */
+.faq .accordion-button::after {
+  transform: scale(1.15) rotate(0deg);
+  transition: transform .25s ease;
+  /* el ícono de Bootstrap usa un SVG interno; lo escalamos/rotamos */
+}
+.faq .accordion-button:not(.collapsed)::after {
+  transform: scale(1.15) rotate(-180deg);
 }
 
+/* Contenido */
 .faq .accordion-body {
-  padding: 0 0 25px 0;
+  padding: 16px 22px 22px 22px;   /* más aire */
   border: 0;
+  color: var(--lassen-text);
+  background: transparent;
+}
+
+/* Tipografía interna del body (por si hay párrafos/links) */
+.faq .accordion-body p {
+  margin: 0 0 8px 0;
+  line-height: 1.6;
+}
+.faq .accordion-body a {
+  color: var(--lassen-primary);
+  font-weight: 600;
+  text-decoration: underline;
+}
+.faq .accordion-body a:hover {
+  color: var(--lassen-primary-600);
+}
+
+/* Ajustes responsivos: un poco más compacto en móviles */
+@media (max-width: 576px) {
+  .faq .accordion-button {
+    padding: 16px 18px;
+    font-size: 17px;
+  }
+  .faq .accordion-body {
+    padding: 14px 18px 18px 18px;
+  }
+}
+
+/* Opcional: header “Preguntas” arriba del acordeón */
+.section-header h2 {
+  color: var(--accent);
+}
+.section-header p {
+  color: var(--lassen-ink);
 }
 
 /*--------------------------------------------------------------
