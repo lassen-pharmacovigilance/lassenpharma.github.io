@@ -46,7 +46,6 @@ canvas {
     rgba(10, 16, 45, 0.35) 0%,
     rgba(10, 16, 45, 0.2) 100%
   );
-  backdrop-filter: blur(1px);
 }
 
 header,

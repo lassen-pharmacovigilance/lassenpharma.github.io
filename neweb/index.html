@@ -817,12 +817,15 @@
         const particles = new THREE.Points(geometry, material);
         scene.add(particles);
 
-        renderer = new THREE.WebGLRenderer();
+        const bgCanvas = document.getElementById("particles");
+        renderer = new THREE.WebGLRenderer({
+          canvas: bgCanvas,
+          alpha: true,
+          antialias: true,
+        });
         renderer.setPixelRatio(window.devicePixelRatio);
         renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.appendChild(renderer.domElement);
-
-        document.body.style.touchAction = "none";
+        // renderer.setClearColor(0x000000, 0);
         document.body.addEventListener("pointermove", onPointerMove);
         window.addEventListener("resize", onWindowResize);
       }
