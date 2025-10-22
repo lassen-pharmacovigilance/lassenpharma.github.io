@@ -943,11 +943,11 @@ section {
 }
 
 .services .service-box.blue .read-more {
-   color: var(--lassen-primary);
+  color: var(--lassen-primary);
 }
 
 .services .service-box.blue:hover {
-   background: var(--lassen-primary);
+  background: var(--lassen-primary);
 }
 
 .services .service-box.orange {
@@ -955,12 +955,12 @@ section {
 }
 
 .services .service-box.orange .icon {
-   color: var(--lassen-secondary);
+  color: var(--lassen-secondary);
   background: var(--lassen-bg-soft);
 }
 
 .services .service-box.orange .read-more {
-   color: var(--lassen-secondary);
+  color: var(--lassen-secondary);
 }
 
 .services .service-box.orange:hover {
@@ -981,7 +981,7 @@ section {
 }
 
 .services .service-box.green:hover {
- background: var(--lassen-primary-600);
+  background: var(--lassen-primary-600);
 }
 
 .services .service-box.red {
@@ -994,7 +994,7 @@ section {
 }
 
 .services .service-box.red .read-more {
-   color: var(--lassen-primary-700);
+  color: var(--lassen-primary-700);
 }
 
 .services .service-box.red:hover {
@@ -1002,16 +1002,16 @@ section {
 }
 
 .services .service-box.purple {
- border-bottom: 3px solid var(--lassen-primary);
+  border-bottom: 3px solid var(--lassen-primary);
 }
 
 .services .service-box.purple .icon {
-color: var(--lassen-primary);
+  color: var(--lassen-primary);
   background: var(--lassen-chip);
 }
 
 .services .service-box.purple .read-more {
-   color: var(--lassen-primary);
+  color: var(--lassen-primary);
 }
 
 .services .service-box.purple:hover {
@@ -1019,11 +1019,11 @@ color: var(--lassen-primary);
 }
 
 .services .service-box.pink {
- border-bottom: 3px solid var(--lassen-secondary);
+  border-bottom: 3px solid var(--lassen-secondary);
 }
 
 .services .service-box.pink .icon {
- color: var(--lassen-secondary);
+  color: var(--lassen-secondary);
   background: var(--lassen-bg-soft);
 }
 
@@ -1032,7 +1032,7 @@ color: var(--lassen-primary);
 }
 
 .services .service-box.pink:hover {
- background: var(--lassen-secondary);
+  background: var(--lassen-secondary);
 }
 
 .services .service-box:hover h3,
@@ -1148,13 +1148,12 @@ color: var(--lassen-primary);
 # F.A.Q
 --------------------------------------------------------------*/
 .faq {
- 
   --faq-card-bg: rgba(255, 255, 255, 0.85);
   --faq-shadow: 0 8px 28px rgba(63, 32, 91, 0.12);
 }
 
 .faq .accordion {
-  gap: 16px;                 /
+  gap: 16px;
 }
 
 .faq .accordion-item {
@@ -1164,7 +1163,7 @@ color: var(--lassen-primary);
   overflow: hidden;
   backdrop-filter: blur(6px);
   box-shadow: var(--faq-shadow);
-  margin-bottom: 16px;       
+  margin-bottom: 16px;
 }
 
 /* Botón del acordeón */
@@ -1176,8 +1175,8 @@ color: var(--lassen-primary);
   background: transparent;
   border: 0;
   text-align: left;
-  box-shadow: none !important;     
-  transition: background .25s ease, color .25s ease, padding .2s ease;
+  box-shadow: none !important;
+  transition: background 0.25s ease, color 0.25s ease, padding 0.2s ease;
 }
 
 /* Hover: leve tint violeta */
@@ -1188,7 +1187,11 @@ color: var(--lassen-primary);
 /* Estado abierto */
 .faq .accordion-button:not(.collapsed) {
   color: var(--lassen-primary);
-  background: linear-gradient(0deg, rgba(111,46,173,0.06), rgba(111,46,173,0.06));
+  background: linear-gradient(
+    0deg,
+    rgba(111, 46, 173, 0.06),
+    rgba(111, 46, 173, 0.06)
+  );
   border-bottom: 1px solid var(--lassen-border);
   padding-bottom: 16px;
 }
@@ -1203,7 +1206,7 @@ color: var(--lassen-primary);
 /* Chevron más grande + animado (aprovecha el de Bootstrap) */
 .faq .accordion-button::after {
   transform: scale(1.15) rotate(0deg);
-  transition: transform .25s ease;
+  transition: transform 0.25s ease;
   /* el ícono de Bootstrap usa un SVG interno; lo escalamos/rotamos */
 }
 .faq .accordion-button:not(.collapsed)::after {
@@ -1212,7 +1215,7 @@ color: var(--lassen-primary);
 
 /* Contenido */
 .faq .accordion-body {
-  padding: 16px 22px 22px 22px;   /* más aire */
+  padding: 16px 22px 22px 22px; /* más aire */
   border: 0;
   color: var(--lassen-text);
   background: transparent;
@@ -1776,125 +1779,276 @@ color: var(--lassen-primary);
 }
 
 /*--------------------------------------------------------------
-# Contact
+# Contact (LASSEN palette + modern)
 --------------------------------------------------------------*/
+.contact {
+  --card-bg: rgba(255, 255, 255, 0.92);
+  --card-shadow: 0 10px 28px rgba(63, 32, 91, 0.12);
+}
+
 .contact .info-box {
-  color: #444444;
-  background: #fafbff;
-  padding: 30px;
+  color: var(--lassen-text);
+  background: rgba(255, 255, 255, 0.96);
+  padding: 28px 26px;
+  border: 1px solid var(--lassen-border);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(63, 32, 91, 0.08);
+  backdrop-filter: blur(4px);
+  transition: all 0.25s ease;
+  height: 100%;
+}
+
+.contact .info-box:hover {
+  transform: translateY(-3px);
+  border-color: var(--lassen-focus);
+  box-shadow: 0 10px 28px rgba(63, 32, 91, 0.15);
 }
 
 .contact .info-box i {
-  font-size: 38px;
-  line-height: 0;
-  color: #4154f1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  font-size: 22px;
+  color: var(--lassen-primary);
+  background: var(--lassen-chip);
+  border: 2px solid var(--lassen-primary);
+  border-radius: 12px;
+  margin-bottom: 10px;
 }
 
 .contact .info-box h3 {
   font-size: 20px;
-  color: #012970;
-  font-weight: 700;
-  margin: 20px 0 10px 0;
+  color: var(--lassen-ink);
+  font-weight: 800;
+  margin: 10px 0 12px;
 }
 
 .contact .info-box p {
   padding: 0;
-  line-height: 24px;
-  font-size: 14px;
+  line-height: 1.6;
+  font-size: 15px;
   margin-bottom: 0;
+  color: var(--lassen-text);
+}
+
+.contact .info-box p br + span,
+.contact .info-box p a {
+  display: block;
+  margin-top: 4px;
+}
+.contact .info-box p a,
+.contact .info-box p {
+  font-family: "Nunito", sans-serif;
+  word-break: break-word;
+}
+
+.contact .info-box p a {
+  color: var(--lassen-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+.contact .info-box p a:hover {
+  color: var(--lassen-primary-600);
+}
+
+.contact .info-box p span,
+.contact .info-box p a {
+  display: inline-block;
+  background: var(--lassen-bg-soft);
+  padding: 4px 8px;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .contact .info-box {
+    text-align: center;
+  }
+  .contact .info-box i {
+    margin-bottom: 12px;
+  }
+}
+
+.contact .php-email-form .row.gy-4 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1rem;
+}
+
+.contact .php-email-form .col-md-6,
+.contact .php-email-form .col-md-12 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact .php-email-form .text-center {
+  margin-top: 1.5rem;
 }
 
 .contact .php-email-form {
-  background: #fafbff;
-  padding: 30px;
-  height: 100%;
+  padding: 45px 40px;
+}
+
+@media (max-width: 576px) {
+  .contact .php-email-form {
+    padding: 30px 24px;
+  }
+  .contact .php-email-form .row.gy-4 {
+    gap: 0.9rem;
+  }
+}
+
+/* ===== Form card ===== */
+.contact .php-email-form {
+  background: var(--card-bg);
+  padding: 40px 35px;
+  border: 1px solid var(--lassen-border);
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(6px);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact .php-email-form .form-control,
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  border-radius: 12px;
+  box-shadow: none;
+  font-size: 15px;
+  border: 1px solid var(--lassen-border);
+  background: #fff;
+  color: var(--lassen-text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.contact .php-email-form .form-control::placeholder,
+.contact .php-email-form input::placeholder,
+.contact .php-email-form textarea::placeholder {
+  color: var(--lassen-muted);
+}
+
+.contact .php-email-form input[type="text"],
+.contact .php-email-form input[type="email"] {
+  padding: 12px 14px;
+}
+
+.contact .php-email-form textarea {
+  padding: 14px 16px;
+  resize: vertical;
+  min-height: 168px;
+}
+
+.contact .php-email-form .form-control:focus,
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus {
+  border-color: var(--lassen-primary);
+  box-shadow: 0 0 0 4px rgba(111, 46, 173, 0.16);
+  background: #fff;
+  outline: none;
+}
+
+.contact .php-email-form button[type="submit"] {
+  background: var(--lassen-primary);
+  border: 0;
+  padding: 12px 32px;
+  color: #fff;
+  transition: background 0.25s ease, transform 0.03s ease, box-shadow 0.2s ease;
+  border-radius: 12px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  box-shadow: 0 10px 24px rgba(111, 46, 173, 0.28);
+}
+.contact .php-email-form button[type="submit"]:hover {
+  background: var(--lassen-primary-600);
+  box-shadow: 0 12px 28px rgba(111, 46, 173, 0.32);
+}
+.contact .php-email-form button[type="submit"]:active {
+  transform: translateY(1px);
+}
+.contact .php-email-form button[type="submit"]:focus-visible {
+  outline: 3px solid var(--lassen-focus);
+  outline-offset: 2px;
 }
 
 .contact .php-email-form .error-message {
   display: none;
   color: #fff;
-  background: #ed3c0d;
+  background: #e45865;
   text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
+  padding: 14px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  border-radius: 10px;
 }
 
 .contact .php-email-form .sent-message {
   display: none;
-  color: #fff;
-  background: #18d26e;
+  color: #0a7a4b;
+  background: #e6fff3;
   text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
+  padding: 14px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  border: 1px solid #b9f0d3;
+  border-radius: 10px;
 }
 
 .contact .php-email-form .loading {
   display: none;
   background: #fff;
   text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
+  padding: 14px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px dashed var(--lassen-border);
+  color: var(--lassen-muted);
 }
-
 .contact .php-email-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
+  border: 3px solid var(--lassen-primary);
+  border-top-color: transparent;
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input,
-.contact .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-  border-radius: 0;
+.contact .php-email-form .row.gy-4 > [class*="col-"] {
+  margin-top: 0;
 }
-
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
-  border-color: #4154f1;
-}
-
-.contact .php-email-form input[type="text"],
-.contact .php-email-form input[type="email"] {
-  padding: 10px 15px;
-}
-
-.contact .php-email-form textarea {
-  padding: 12px 15px;
-}
-
-.contact .php-email-form button[type="submit"] {
-  background: #4154f1;
-  border: 0;
-  padding: 10px 30px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 4px;
-}
-
-.contact .php-email-form button[type="submit"]:hover {
-  background: #5969f3;
+.contact .php-email-form .form-group {
+  margin-bottom: 14px;
 }
 
 @keyframes animate-loading {
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
 }
 
+@media (max-width: 576px) {
+  .contact .info-box,
+  .contact .php-email-form {
+    padding: 20px;
+    border-radius: 14px;
+  }
+  .contact .info-box h3 {
+    font-size: 20px;
+  }
+}
 /*--------------------------------------------------------------
 # Blog
 --------------------------------------------------------------*/
@@ -2412,10 +2566,11 @@ color: var(--lassen-primary);
   font-size: 14px;
 }
 
+/* Newsletter */
 .footer .footer-newsletter {
   padding: 50px 0;
   /* background: #f6f9ff; */
-  border-top: 1px solid #e1ecff;
+  border-top: 1px solid var(--lassen-border);
 }
 
 .footer .footer-newsletter h4 {
@@ -2424,7 +2579,7 @@ color: var(--lassen-primary);
   padding: 0;
   line-height: 1;
   font-weight: 700;
-  color: #012970;
+  color: var(--lassen-ink);
 }
 
 .footer .footer-newsletter form {
@@ -2432,14 +2587,20 @@ color: var(--lassen-primary);
   background: #fff;
   padding: 6px 10px;
   position: relative;
-  border-radius: 4px;
-  border: 1px solid #e1ecff;
+  border-radius: 8px;
+  border: 1px solid var(--lassen-border);
 }
 
 .footer .footer-newsletter form input[type="email"] {
   border: 0;
   padding: 8px;
   width: calc(100% - 140px);
+  color: var(--lassen-text);
+  background: transparent;
+}
+
+.footer .footer-newsletter form input[type="email"]::placeholder {
+  color: var(--lassen-muted);
 }
 
 .footer .footer-newsletter form input[type="submit"] {
@@ -2448,20 +2609,25 @@ color: var(--lassen-primary);
   right: 0;
   bottom: 0;
   border: 0;
-  background: none;
+  background: var(--lassen-primary);
   font-size: 16px;
   padding: 0 30px;
   margin: 3px;
-  background: #4154f1;
   color: #fff;
-  transition: 0.3s;
-  border-radius: 4px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
 }
 
 .footer .footer-newsletter form input[type="submit"]:hover {
-  background: #5969f3;
+  background: var(--lassen-primary-600);
 }
 
+.footer .footer-newsletter form input[type="submit"]:focus-visible {
+  outline: 3px solid var(--lassen-focus);
+  outline-offset: 2px;
+}
+
+/* Top area */
 .footer .footer-top {
   /* background: white url(../img/footer-bg.png) no-repeat right top; */
   background-size: contain;
@@ -2494,7 +2660,7 @@ color: var(--lassen-primary);
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #012970;
+  color: var(--lassen-ink);
   font-family: "Nunito", sans-serif;
   margin-top: 3px;
 }
@@ -2504,25 +2670,26 @@ color: var(--lassen-primary);
   line-height: 24px;
   margin-bottom: 0;
   font-family: "Nunito", sans-serif;
+  color: var(--lassen-text);
 }
 
 .footer .footer-top .social-links a {
   font-size: 20px;
   display: inline-block;
-  color: rgba(1, 41, 112, 0.5);
+  color: var(--lassen-muted);
   line-height: 0;
   margin-right: 10px;
-  transition: 0.3s;
+  transition: color 0.3s ease;
 }
 
 .footer .footer-top .social-links a:hover {
-  color: #012970;
+  color: var(--lassen-ink);
 }
 
 .footer .footer-top h4 {
   font-size: 16px;
   font-weight: bold;
-  color: #012970;
+  color: var(--lassen-ink);
   text-transform: uppercase;
   position: relative;
   padding-bottom: 12px;
@@ -2540,7 +2707,7 @@ color: var(--lassen-primary);
 
 .footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #d0d4fc;
+  color: var(--lassen-border);
   font-size: 12px;
   line-height: 0;
 }
@@ -2556,29 +2723,31 @@ color: var(--lassen-primary);
 }
 
 .footer .footer-top .footer-links ul a {
-  color: #013289;
-  transition: 0.3s;
+  color: var(--lassen-ink);
+  transition: color 0.3s ease;
   display: inline-block;
   line-height: 1;
 }
 
 .footer .footer-top .footer-links ul a:hover {
-  color: #4154f1;
+  color: var(--lassen-primary);
 }
 
 .footer .footer-top .footer-contact p {
   line-height: 26px;
+  color: var(--lassen-text);
 }
 
+/* Bottom strip */
 .footer .copyright {
   text-align: center;
   padding-top: 30px;
-  color: #012970;
+  color: var(--lassen-ink);
 }
 
 .footer .credits {
   padding-top: 10px;
   text-align: center;
   font-size: 13px;
-  color: #012970;
+  color: var(--lassen-ink);
 }
