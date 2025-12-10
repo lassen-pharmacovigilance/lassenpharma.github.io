@@ -2751,3 +2751,227 @@ section {
   font-size: 13px;
   color: var(--lassen-ink);
 }
+/* ============================
+   NAVBAR – SIEMPRE HAMBURGUESA
+   ============================ */
+
+/* Ocultar menú horizontal en todos los tamaños cuando NO está abierto */
+#navbar:not(.navbar-mobile) ul {
+  display: none;
+}
+
+/* Ícono hamburguesa siempre visible */
+#navbar .mobile-nav-toggle {
+  position: fixed; /* SIEMPRE fija */
+  top: 50px; /* ajustá a tu gusto */
+  right: 300px; /* ajustá a tu gusto */
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: var(--lassen-purple);
+  color: var(--lassen-ink);
+  font-size: 22px;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease,
+    box-shadow 0.25s ease, transform 0.15s ease;
+  backdrop-filter: blur(10px);
+}
+
+
+#navbar .mobile-nav-toggle:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(124, 43, 207, 0.7);
+}
+
+/* ============================
+   ESTADO SCROLLED
+   ============================ */
+
+.header.header-scrolled {
+  background: transparent;
+  box-shadow: none;
+  padding: 8px 0;
+}
+
+/* Ocultar logo al scrollear */
+.header.header-scrolled .logo {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+}
+
+/* Dejar SOLO la hamburguesa flotando con círculo violeta */
+.header.header-scrolled #navbar {
+  margin-left: auto;
+}
+
+.header.header-scrolled #navbar .mobile-nav-toggle {
+  position: fixed; /* SIEMPRE fija */
+  top: 50px; /* ajustá a tu gusto */
+  right: 300px; /* ajustá a tu gusto */
+  z-index: 2000;
+
+  background: var(--lassen-purple);
+  border-color: transparent;
+  box-shadow: 0 12px 30px rgba(124, 43, 207, 0.7);
+  color: var(--lassen-ink);
+  z-index: 1000;
+}
+
+@media (max-width: 1500px) {
+  #navbar .mobile-nav-toggle {
+    top: 50px; /* ajustá a tu gusto */
+    right: 50px;
+  }
+  .header.header-scrolled #navbar .mobile-nav-toggle {
+    top: 50px; /* ajustá a tu gusto */
+    right: 50px;
+  }
+}
+/* ============================
+   MENÚ MOBILE OVERLAY
+   ============================ */
+
+.navbar.navbar-mobile {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+      circle at top right,
+      rgba(124, 43, 207, 0.35),
+      transparent 55%
+    ),
+    rgba(7, 26, 58, 0.92);
+  backdrop-filter: blur(16px);
+  padding: 90px 20px 24px;
+  overflow-y: auto;
+}
+
+/* Tarjeta blanca con las opciones del menú */
+.navbar.navbar-mobile ul {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 20px 28px;
+  max-width: 480px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(7, 26, 58, 0.55),
+    0 0 0 1px rgba(15, 23, 42, 0.04);
+    color: black;
+}
+
+.navbar.navbar-mobile li {
+  padding: 0;
+  margin-bottom: 6px;
+}
+
+.navbar.navbar-mobile a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  padding: 12px 18px;
+  border-radius: 14px;
+
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(30, 30, 40, 0.85);
+  text-decoration: none;
+
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  margin: 0;
+  box-shadow:
+    0 4px 12px rgba(15, 20, 30, 0.12),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+
+  transition:
+    background 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease,
+    color 0.25s ease;
+}
+
+.navbar.navbar-mobile a:hover {
+  transform: translateX(4px);
+  background: rgba(255, 255, 255, 0.75);
+
+  box-shadow:
+    0 8px 22px rgba(124, 43, 207, 0.22),
+    inset 0 1px 1px rgba(255, 255, 255, 0.55);
+
+  color: var(--lassen-purple);
+}
+
+/* ============================================================
+   ACTIVE STATE — Pastilla violeta suave como tu captura
+   ============================================================ */
+
+.navbar.navbar-mobile a.nav-link.active,
+.navbar.navbar-mobile a.nav-link:focus {
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--lassen-purple);
+
+  box-shadow:
+    0 12px 32px rgba(124, 43, 207, 0.35),
+    inset 0 2px 4px rgba(255, 255, 255, 0.6);
+
+  transform: translateX(4px);
+}
+
+/* ============================================================
+   BOTÓN DESTACADO (getstarted) — versión elegante
+   ============================================================ */
+
+.navbar.navbar-mobile .getstarted {
+  background: linear-gradient(
+    135deg,
+    rgba(124, 43, 207, 1) 0%,
+    rgba(161, 96, 255, 0.9) 100%
+  );
+
+  color: #ffffff !important;
+  font-weight: 600;
+
+  box-shadow:
+    0 12px 28px rgba(124, 43, 207, 0.55),
+    inset 0 1px 2px rgba(255, 255, 255, 0.35);
+}
+
+.navbar.navbar-mobile .getstarted:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(145, 63, 230, 1) 0%,
+    rgba(178, 122, 255, 1) 100%
+  );
+
+  box-shadow:
+    0 16px 32px rgba(124, 43, 207, 0.65),
+    inset 0 1px 2px rgba(255, 255, 255, 0.45);
+    overflow: hidden;
+}
+
+
+/* ============================================================
+   TÍTULO “NAVEGACIÓN”
+   ============================================================ */
+
+.navbar.navbar-mobile ul::before {
+  content: "NAVEGACIÓN";
+  display: block;
+
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: rgba(30, 30, 40, 0.45);
+  margin-bottom: 10px;
+  margin-left: 6px;
+}
