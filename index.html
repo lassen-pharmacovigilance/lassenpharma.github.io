@@ -749,8 +749,21 @@
 
       <div class="container">
         <div class="copyright">
-           <span id="year"></span> © Copyright <strong><span>LASSENPHARMA</span></strong
+          <span id="year"></span> © Copyright
+          <strong><span>LASSENPHARMA</span></strong
           >. All Rights Reserved
+        </div>
+        <div class="credits">
+          <a
+            class="raven3-credit"
+            href="https://raven3.com.ar/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Raven3 — Diseño y desarrollo web"
+            title="Raven3 — Diseño y desarrollo web"
+          >
+            by Raven3
+          </a>
         </div>
       </div>
     </footer>
@@ -795,7 +808,7 @@
           50,
           window.innerWidth / window.innerHeight,
           5,
-          2000
+          2000,
         );
         camera.position.z = 500;
 
@@ -819,7 +832,7 @@
 
         geometry.setAttribute(
           "position",
-          new THREE.Float32BufferAttribute(vertices, 3)
+          new THREE.Float32BufferAttribute(vertices, 3),
         );
 
         material = new THREE.PointsMaterial({
